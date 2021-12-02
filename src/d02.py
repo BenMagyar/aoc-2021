@@ -22,3 +22,13 @@ def find_distance_with_aim(directions):
         x += direction['x']
         y += direction['x'] * aim
     return x * y
+
+def test(input):
+    input = prepare(input)
+    assert find_distance(input) == 150
+    assert find_distance_with_aim(input) == 900
+
+def answer(input):
+    input = prepare(input)
+    print(find_distance(input))
+    print(find_distance_with_aim(input))

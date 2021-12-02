@@ -1,3 +1,2 @@
 #!/bin/bash
-day=$1
-PYTHONPATH=$PWD python3 "./answers/d${day}.py"
+PYTHONPATH=$PWD python3 ./src/runner.py $1

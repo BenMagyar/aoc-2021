@@ -1,3 +1,2 @@
 #!/bin/bash
-day=$1
-pytest -s "./tests/${day}_test.py"
+PYTHONPATH=$PWD python3 ./src/runner.py -t $1

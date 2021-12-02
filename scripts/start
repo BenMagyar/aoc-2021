@@ -1,0 +1,13 @@
+#!/bin/bash
+touch "examples/$1.txt"
+cat > "src/d$1.py" <<EOF
+def prepare():
+    
+def part_one():
+    
+def test(input):
+    assert
+
+def answer(input):
+    print()
+EOF
