@@ -6,8 +6,13 @@ def prepare():
 def part_one():
     
 def test(input):
-    assert
+    assert true == true
 
 def answer(input):
     print()
 EOF
+session=`cat .session`
+day=$(echo $1 | sed 's/^0*//')
+curl -s "https://adventofcode.com/2021/day/$day/input" \
+    -H "Cookie: session=$session" \
+    -o "inputs/$1.txt"
