@@ -21,7 +21,7 @@ def gamma_and_epsilon(input):
     for column in columns:
         gamma_bit = bits_mode(column)
         gamma.append(gamma_bit)
-        epsilon.append(0 if gamma_bit == 1 else 1)
+        epsilon.append(int(not gamma_bit))
     return bits_as_int(gamma) * bits_as_int(epsilon)
 
 def search(rows, find_criteria, pos=0):
@@ -37,7 +37,7 @@ def search(rows, find_criteria, pos=0):
 def life_support_rating(input):
     rows, _ = input
     oxygen = search(rows, bits_mode)
-    co2 = search(rows, lambda c: 1 if bits_mode(c) == 0 else 0)
+    co2 = search(rows, lambda c: int(not bits_mode(c)))
     return oxygen * co2
     
 def test(input):
