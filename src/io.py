@@ -1,7 +1,7 @@
 import os
 
 def clean(lines):
-    return [line for line in lines if not line.isspace()]
+    return [line.rstrip() for line in lines if not line.isspace()]
 
 def read_example(day):
     with open(os.path.join(os.getcwd(), "examples", day + ".txt")) as file:
