@@ -67,4 +67,4 @@ def test(input):
 def answer(input):
     input = prepare(input)
     print(part_one(input))
-    print(part_two(input))
+    print(part_two(input))  
