@@ -16,12 +16,6 @@ def neighbors(end, x, y):
         if x >= 0 and x <= max_x and y >= 0 and y <= max_y
     ]
 
-def extra_cost(cost, node, end):
-    x, y = node
-    max_x, max_y = end
-    value = (cost + floor(x / max_x) + floor(y / max_y)) % 9
-    return value if value != 0 else 9 
-    
 def find_path(input):
     cavern, end = input
     queue = set(cavern.keys())
