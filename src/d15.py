@@ -1,6 +1,5 @@
 from math import floor
 from copy import deepcopy
-from time import time
 
 def prepare(input):
     cavern = {}
