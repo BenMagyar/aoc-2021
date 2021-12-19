@@ -2,7 +2,6 @@ import math
 import json
 from copy import deepcopy
 from itertools import permutations
-from os import posix_spawn
 
 def prepare(input):
     return [json.loads(line) for line in input]
