@@ -44,17 +44,6 @@ def enhance(input, steps=2):
         lights = output
     
     return lights
-
-def pp(lights, min_x, max_x, min_y, max_y, borders, step):
-    for y in range(min_y - 5, max_y + 5):
-        for x in range(min_x - 5, max_x + 5):
-            if (x, y) in lights:
-                print('#', end='')
-            elif x < min_x or x > max_x or y < min_y or y > max_y:
-                print('#' if borders[(step - 1) % 2] == '#' else ' ', end='')
-            else:
-                print(' ', end='')
-        print('')
     
 def part_one(input):
     return len(enhance(input))
